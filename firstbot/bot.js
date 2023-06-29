@@ -149,6 +149,7 @@ bot.action('about', ctx =>{
         }
     })
 })
+/* English */
 
 /*uzbek*/ 
 bot.action('uzbek', ctx =>{
@@ -191,6 +192,25 @@ bot.action('Sozlamalar', ctx =>{
     ctx.deleteMessage();
     bot.telegram.sendMessage
     (ctx.chat.id, "Sozlamalar",
+    {
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: 'Tilni o`zgartirish', callback_data: 'til'} 
+                ],
+                [
+                    { text: '⬅️ Menuga qaytish', callback_data: 'uzbek'} 
+                ]
+            ],
+            resize_keyboard:true
+        }
+    })
+})
+
+bot.action('til', ctx =>{
+    ctx.deleteMessage();
+    bot.telegram.sendMessage
+    (ctx.chat.id, "Iltimos, bitta tilni tanlang",
     {
         reply_markup:{
             inline_keyboard: [
@@ -285,7 +305,26 @@ bot.action('Заказы', ctx =>{
 bot.action('Настройки', ctx =>{
     ctx.deleteMessage();
     bot.telegram.sendMessage
-    (ctx.chat.id, "Настройки",
+    (ctx.chat.id, "Пожалуйста, выберите один язык",
+    {
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: 'Изменить язык', callback_data: 'язык'} 
+                ],
+                [
+                    { text: '⬅️ Вернуться в меню', callback_data: 'russian'} 
+                ]
+            ],
+            resize_keyboard:true
+        }
+    })
+})
+
+bot.action('язык', ctx =>{
+    ctx.deleteMessage();
+    bot.telegram.sendMessage
+    (ctx.chat.id, "Пожалуйста, выберите один язык",
     {
         reply_markup:{
             inline_keyboard: [
