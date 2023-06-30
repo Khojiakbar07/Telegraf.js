@@ -5,29 +5,34 @@ const axios = require('axios');
 const bot = new Telegraf('6166401028:AAGBREk2CJ-5XtSFOf2jaT9wRQT9eATTIJ4');
 /* English */
 bot.command('start', ctx =>{
-    bot.telegram.sendMessage(ctx.chat.id,"Welcome "  + ctx.from.first_name +  " this bot gives you  about our Vender project.",
+    // ctx.deleteMessage();
+    bot.telegram.sendMessage(ctx.chat.id, ctx.from.first_name +  
+    " Please choose one language",
     {
         reply_markup:{
           inline_keyboard: [
             [
-                { text: '🛍 Click me', url: 'https://vender.gougo.uz/'}
+                { text: '🇺🇿Uzbek', callback_data: 'uzbek'} 
             ],
             [
-              { text: '📋 My orders', callback_data: 'orders'},
-              { text: '⚙️ Settings', callback_data: 'Settings'}
+                { text: '🇷🇺Russian', callback_data: 'russian'} 
             ],
             [
-              { text: '✍️ Leave feedback', callback_data: 'feedback'},
-              { text: 'ℹ️ About us', callback_data: 'about'}
+                { text: '🇬🇧English', callback_data: 'english'} 
             ],
+            [
+                { text: '⬅️ Back to menu', callback_data: 'start'} 
+            ]
         ],
         resize_keyboard:true
     }
   })
 })
+// Main Menu
 
 bot.action('start', ctx =>{
-    bot.telegram.sendMessage(ctx.chat.id, 'Main Menu',{
+    bot.telegram.sendMessage(ctx.chat.id,"Welcome "  + ctx.from.first_name +  
+    " this bot gives you  about our Vender project.",{
         reply_markup:{
             inline_keyboard: [
                 [
@@ -101,6 +106,7 @@ bot.action('languages', ctx =>{
 })
 
 bot.action('english', ctx =>{
+    ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id, 'Main Menu',{
         reply_markup:{
             inline_keyboard: [
@@ -137,7 +143,7 @@ bot.action('feedback', ctx =>{
 })
 
 bot.action('about', ctx =>{
-    ctx.deleteMessage();
+    // ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id, '💻 Connect to Vender group\n📲Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
     {
         reply_markup:{
@@ -153,6 +159,7 @@ bot.action('about', ctx =>{
 
 /*uzbek*/ 
 bot.action('uzbek', ctx =>{
+    ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id,"Xush kelibsiz "  + ctx.from.first_name +  " bu bot bilan biz haqimizda bilib olishingiz mumkin",{
         reply_markup:{
             inline_keyboard: [
@@ -267,6 +274,7 @@ bot.action('haqimizda', ctx =>{
 /*Russian */
 
 bot.action('russian', ctx =>{
+    ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id,"Добро пожаловать " + ctx.from.first_name + " вы можете узнать о нас с помощью этого бота",{
         reply_markup:{
             inline_keyboard: [
@@ -363,7 +371,7 @@ bot.action('отзыв', ctx =>{
 })
 
 bot.action('нас', ctx =>{
-    ctx.deleteMessage();
+    // ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id, '💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
     {
         reply_markup:{
