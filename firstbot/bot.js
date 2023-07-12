@@ -28,6 +28,96 @@ bot.command('start', ctx =>{
     }
   })
 })
+//////////////////
+bot.command('contract', ctx =>{
+    bot.telegram.sendMessage(ctx.chat.id, 'Если вы хотите сотрудничать с нами!\n📲 Kamoliddin: +998(95) 000-04-09 \n 🌐 e-mail: @Uzsoftic',
+    {
+        // reply_markup:{
+        //     inline_keyboard: [
+        //         [
+        //             { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
+        //         ]
+        //     ]
+        // }
+    })
+})
+
+bot.command('site', ctx =>{
+    ctx.deleteMessage();
+    bot.telegram.sendMessage(ctx.chat.id," Вы можете узнать о нас с помощью этого бота",{
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: '🛍 Войти на сайт', url: 'https://vender.gougo.uz/'}
+                ],
+            ]
+        }
+    })
+})
+
+bot.command('settings', ctx =>{
+    ctx.deleteMessage();
+    bot.telegram.sendMessage
+    (ctx.chat.id, "Настройки",
+    {
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: 'Изменить язык', callback_data: 'язык'} 
+                ],
+                [
+                    { text: '⬅️ Вернуться в меню', callback_data: 'russian'} 
+                ]
+            ],
+            resize_keyboard:true
+        }
+    })
+})
+
+bot.command('help', ctx =>{
+    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    {
+        // reply_markup:{
+        //     inline_keyboard: [
+        //         [
+        //             { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
+        //         ]
+        //     ]
+        // }
+    })
+})
+
+bot.command('orders', ctx =>{
+    ctx.deleteMessage();
+    bot.telegram.sendMessage
+    (ctx.chat.id, "😔 Извините, у вас нет заказов",
+    {
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
+                ]
+            ],
+            resize_keyboard:true
+        }
+    })
+})
+
+bot.command('contact', ctx =>{
+    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    {
+        // reply_markup:{
+        //     inline_keyboard: [
+        //         [
+        //             { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
+        //         ]
+        //     ]
+        // }
+    })
+})
+
+//////////////////////////////////////////
+
 // Main Menu
 
 bot.action('start', ctx =>{
@@ -107,7 +197,8 @@ bot.action('languages', ctx =>{
 
 bot.action('english', ctx =>{
     ctx.deleteMessage();
-    bot.telegram.sendMessage(ctx.chat.id, 'Main Menu',{
+    bot.telegram.sendMessage(ctx.chat.id,"Welcome "  + ctx.from.first_name +  
+    " this bot gives you  about our Vender project.",{
         reply_markup:{
             inline_keyboard: [
                 [
@@ -309,11 +400,11 @@ bot.action('Заказы', ctx =>{
         }
     })
 })
-
+// Пожалуйста, выберите один язык
 bot.action('Настройки', ctx =>{
     ctx.deleteMessage();
     bot.telegram.sendMessage
-    (ctx.chat.id, "Пожалуйста, выберите один язык",
+    (ctx.chat.id, "Настройки",
     {
         reply_markup:{
             inline_keyboard: [
