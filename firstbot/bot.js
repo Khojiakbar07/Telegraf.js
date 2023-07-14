@@ -43,7 +43,6 @@ bot.command('contract', ctx =>{
 })
 
 bot.command('site', ctx =>{
-    ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id," Вы можете узнать о нас с помощью этого бота",{
         reply_markup:{
             inline_keyboard: [
@@ -56,7 +55,6 @@ bot.command('site', ctx =>{
 })
 
 bot.command('settings', ctx =>{
-    ctx.deleteMessage();
     bot.telegram.sendMessage
     (ctx.chat.id, "Настройки",
     {
@@ -88,7 +86,6 @@ bot.command('help', ctx =>{
 })
 
 bot.command('orders', ctx =>{
-    ctx.deleteMessage();
     bot.telegram.sendMessage
     (ctx.chat.id, "😔 Извините, у вас нет заказов",
     {
