@@ -30,7 +30,7 @@ bot.command('start', ctx =>{
 })
 //////////////////
 bot.command('contract', ctx =>{
-    bot.telegram.sendMessage(ctx.chat.id, 'Если вы хотите сотрудничать с нами!\n📲 Kamoliddin: +998(95) 000-04-09 \n 🌐 e-mail: @Uzsoftic',
+    bot.telegram.sendMessage(ctx.chat.id, 'Если вы хотите сотрудничать с нами!\n📲 Kamoliddin: +998(95) 000-04-09 \n 🌐 Telegram: @Uzsoftic',
     {
         // reply_markup:{
         //     inline_keyboard: [
@@ -75,7 +75,7 @@ bot.command('settings', ctx =>{
 })
 
 bot.command('help', ctx =>{
-    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
         // reply_markup:{
         //     inline_keyboard: [
@@ -104,7 +104,7 @@ bot.command('orders', ctx =>{
 })
 
 bot.command('contact', ctx =>{
-    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
         // reply_markup:{
         //     inline_keyboard: [
@@ -235,7 +235,7 @@ bot.action('feedback', ctx =>{
 
 bot.action('about', ctx =>{
     // ctx.deleteMessage();
-    bot.telegram.sendMessage(ctx.chat.id, '💻 Connect to Vender group\n📲Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    bot.telegram.sendMessage(ctx.chat.id, '💻 Connect to Vender group\n📲Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
         reply_markup:{
             inline_keyboard: [
@@ -348,7 +348,7 @@ bot.action('fikr', ctx =>{
 
 bot.action('haqimizda', ctx =>{
     ctx.deleteMessage();
-    bot.telegram.sendMessage(ctx.chat.id, '💻 Vender guruhiga ulaning\n📲Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    bot.telegram.sendMessage(ctx.chat.id, '💻 Vender guruhiga ulaning\n📲Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
         reply_markup:{
             inline_keyboard: [
@@ -463,7 +463,7 @@ bot.action('отзыв', ctx =>{
 
 bot.action('нас', ctx =>{
     // ctx.deleteMessage();
-    bot.telegram.sendMessage(ctx.chat.id, '💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 e-mail: @hojiakbar_zokirovv',
+    bot.telegram.sendMessage(ctx.chat.id, '💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
         reply_markup:{
             inline_keyboard: [
