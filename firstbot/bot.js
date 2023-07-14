@@ -106,13 +106,13 @@ bot.command('orders', ctx =>{
 bot.command('contact', ctx =>{
     bot.telegram.sendMessage(ctx.chat.id, 'Если у вас есть какие-либо проблемы, пожалуйста, свяжитесь с нами.\n💻 Вступайте в группу поставщиков\n📲 Hojiakbar: +998909452540 \n 🌐 Telegram: @hojiakbar_zokirovv',
     {
-        // reply_markup:{
-        //     inline_keyboard: [
-        //         [
-        //             { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
-        //         ]
-        //     ]
-        // }
+        reply_markup:{
+            inline_keyboard: [
+                [
+                    { text: '⬅️ Вернуться в меню', callback_data: 'russian'}
+                ]
+            ]
+        }
     })
 })
 
