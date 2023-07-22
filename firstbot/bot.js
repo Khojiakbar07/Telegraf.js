@@ -493,7 +493,10 @@ bot.on("sticker", (ctx)=> {
     ctx.reply("Please Don't send me a stiker")
 })
 
-
-
-
-bot.launch();
+bot.launch()
+  .then(() => {
+    console.log('Bot started');
+  })
+  .catch((err) => {
+    console.error('Error starting bot:', err);
+  });
