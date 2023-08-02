@@ -16,10 +16,18 @@ Telegraf.js module to interact with the official [Telegram Bot API](https://core
 
 </div>
 
-## Install
+# Install
 
 ```sh
 npm i node-telegram-bot-api
+```
+# Install Nodemon package
+```sh
+npm i -D nodemon
+```
+# Run Project
+```sh
+npm run dev
 ```
 
 ## Usage
