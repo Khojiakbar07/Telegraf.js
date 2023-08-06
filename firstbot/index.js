@@ -1,3 +1,6 @@
+// cd .\firstbot\
+// npm run start 
+
 const Telegraf = require('telegraf');
 // const { Telegraf, Markup } = require("telegraf");
 const axios = require('axios');
