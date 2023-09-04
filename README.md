@@ -27,7 +27,7 @@ npm i -D nodemon
 ```
 # Run Project
 ```sh
-npm run dev
+npm run start
 ```
 
 ## Usage
